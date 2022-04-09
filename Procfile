@@ -1,2 +1,2 @@
 release: python manage.py migrate
-web gunicorn msapi.wsgi --log-file
+web: waitress-serve --port=8000 myapp.wsgi:msapi
